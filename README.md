@@ -1,59 +1,57 @@
-# AngularUdemy
+Angular 
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.8.
+A pet project built to practice Angular 20–21 using a modern standalone-first architecture (no NgModule). The project focuses on clean structure, up-to-date Angular patterns, and best practices.
 
-## Development server
+🚀 Tech Stack
 
-To start a local development server, run:
+Angular 20 / 21
 
-```bash
+TypeScript
+
+Standalone Components (default approach)
+
+Angular Router (lazy loading)
+
+Signals
+
+RxJS
+
+SCSS / CSS
+
+🏁 Getting Started
+Install dependencies
+npm install
+Run development server
 ng serve
-```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Navigate to http://localhost:4200/.
 
-## Code scaffolding
+🧪 Development Notes
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+Each feature owns its routes, components, and services
 
-```bash
-ng generate component component-name
-```
+Global providers are registered in app.config.ts
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+Components are standalone by default
 
-```bash
-ng generate --help
-```
+Routing is centralized in app.routes.ts
 
-## Building
+🎯 Goals of the Project
 
-To build the project run:
+Practice Angular 20–21 standalone architecture
 
-```bash
-ng build
-```
+Learn and apply Signals
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+Build scalable feature-based structure
 
-## Running unit tests
+Avoid legacy patterns (NgModule, monolithic modules)
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+Keep the codebase clean and easy to extend
 
-```bash
-ng test
-```
+📌 Notes
 
-## Running end-to-end tests
+This is a pet project created for learning and experimentation. The structure and patterns may evolve as Angular continues to develop.
 
-For end-to-end (e2e) testing, run:
+📄 License
 
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+MIT
