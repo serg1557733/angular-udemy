@@ -1,12 +1,20 @@
 <app-header/>
 <main>
   <ul>
-    <li>
-      <app-user (select)="onSelect($event)" [user] = "users[0]" />
-    </li>
-    <li>
-      <app-user  (select)="onSelect($event)" [user]="users[1]"/>
-    </li>
+    @for (user of users; track user.id) {
+<!--      <li *ngFor="let user of users">-->
+      <li>
+        <app-user (select)="onSelect($event)" [user] = "user" />
+      </li>
+    }
   </ul>
-  <app-tasks [userName]="selectedUser?.name ?? 'name not found'"  />
+  @if (selectedUser) {
+    <app-tasks [userName]="selectedUser.name"  />
+  } @else {
+    <p>Select a user to see task</p>
+  }
+<!--  <app-tasks *ngIF="selectedUser; else elseBlock" [userName]="selectedUser!.name"  />-->
+    <!--<ng-template #elseBlock>-->
+    <!--  <p>Deprecated</p>-->
+    <!--</ng-template>-->
 </main>

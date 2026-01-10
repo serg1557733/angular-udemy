@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 import {HeaderComponent} from './header/header.component';
 import {UserComponent} from './user/user.component';
 import {DUMMY_USERS} from './dummy-users/users';
@@ -23,4 +22,6 @@ export class AppComponent {
   onSelect (id: string) {
     this.selectedUserId = id;
   }
+
+  protected readonly onoffline = onoffline;
 }
