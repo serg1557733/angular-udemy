@@ -13,4 +13,8 @@ import {DUMMY_USERS} from './dummy-users/users';
 })
 export class AppComponent {
   protected users = DUMMY_USERS
+
+  onSelect (id: string) {
+    console.log(id)
+  }
 }
