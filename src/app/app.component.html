@@ -1,11 +1,12 @@
 <app-header/>
 <main>
   <ul>
-      <li>
-        <app-user (select)="onSelect($event)"  [userId]="users[0].id" [avatar]="users[0].avatar" [name]="users[0].name"/>
-      </li>
     <li>
-      <app-user  (select)="onSelect($event)" [userId]="users[1].id" [avatar]="users[1].avatar" [name]="users[1].name"/>
+      <app-user (select)="onSelect($event)" [user] = "users[0]" />
+    </li>
+    <li>
+      <app-user  (select)="onSelect($event)" [user]="users[1]"/>
     </li>
   </ul>
+  <app-tasks [userName]="selectedUser?.name ?? 'name not found'"  />
 </main>

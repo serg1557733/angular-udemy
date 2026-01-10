@@ -1,4 +1,5 @@
 import {Component, input, computed, Output, EventEmitter, output} from '@angular/core';
+import {User} from '../types/user.type';
 
 @Component({
   selector: 'app-user',
@@ -12,13 +13,13 @@ export class UserComponent {
   // @Input({required: true})  name!: string;
   // @Output() select = new EventEmitter()
 
-  avatar = input.required<string>();
-  name = input.required<string>();
-  userId = input.required<string>()
-  imagePath= computed(() => 'assets/'+ this.avatar())
+  user = input.required<User>();
+  // name = input.required<string>();
+  // userId = input.required<string>()
+  imagePath= computed(() => 'assets/'+ this.user().avatar)
   select = output<string>()
 
   protected onSelectUser(){
-    this.select.emit(this.userId())
+    this.select.emit(this.user().id)
   }
 }
